@@ -12,13 +12,24 @@ class Solution1:
         n = len(nums)
         for i in range(n):
             for j in range(i + 1):
-                return [i, j]
-        return []
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return [] # no solution found
 
 
-# Solution with extra space with O(n) complexity
+# 2. Solution with extra space with O(n) complexity
 class Solution2:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        pass
+        numMap = {}
+        n = len(nums)
+        for i in range(n):
+            complement = target - nums[i]
+            if complement in numMap:
+                return [numMap[complement], i]
+            numMap[nums[i]] = i
+        return [] # no solution found
+
+
+
 
 
