@@ -22,3 +22,27 @@ class Solution:
             else:
                 answer.append(str(i))
         return answer
+
+
+if __name__ == "__main__":
+    solver = Solution()
+    assert solver.fizzBuzz(3) == ["1", "2", "Fizz"]
+    assert solver.fizzBuzz(5) == ["1", "2", "Fizz", "4", "Buzz"]
+    assert solver.fizzBuzz(15) == [
+        "1",
+        "2",
+        "Fizz",
+        "4",
+        "Buzz",
+        "Fizz",
+        "7",
+        "8",
+        "Fizz",
+        "Buzz",
+        "11",
+        "Fizz",
+        "13",
+        "14",
+        "FizzBuzz",
+    ]
+    print("OK")
